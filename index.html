@@ -54,21 +54,33 @@ body {
   margin-top: 0;
 }
 
+/* PRODUCT */
 .product {
   border: 1px solid #eee;
   border-radius: 12px;
   padding: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+
+.product img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #ffe4ed;
 }
 
 .product-title {
   font-size: 18px;
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .price {
   color: #e91e63;
   font-weight: bold;
+  font-size: 18px;
   margin: 5px 0 10px;
 }
 
@@ -124,6 +136,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background: #d81b60;
+}
+
 footer {
   background: #f48fb1;
   color: white;
@@ -144,66 +160,83 @@ footer {
 
 <div class="card">
 
-<h2>🛍️ পণ্য নির্বাচন করুন</h2>
+<h2>🛍️ আমাদের পণ্য</h2>
 
+<!-- PRODUCT 1 -->
 <div class="product">
-  <div class="product-title">পণ্য ১</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Soft+Baby+Set" alt="Colour Pink Soft Baby Set">
+  <div class="product-title">Colour Pink, Soft Baby Set</div>
   <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty1" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 2 -->
 <div class="product">
-  <div class="product-title">পণ্য ২</div>
-  <div class="price">৳800</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
+  <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty2" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 3 -->
 <div class="product">
-  <div class="product-title">পণ্য ৩</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
   <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty3" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 4 -->
 <div class="product">
-  <div class="product-title">পণ্য ৪</div>
-  <div class="price">৳800</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
+  <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty4" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 5 -->
 <div class="product">
-  <div class="product-title">পণ্য ৫</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
   <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty5" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 6 -->
 <div class="product">
-  <div class="product-title">পণ্য ৬</div>
-  <div class="price">৳800</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
+  <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty6" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 7 -->
 <div class="product">
-  <div class="product-title">পণ্য ৭</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
   <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty7" value="0" min="0" onchange="calculate()">
 </div>
 
+<!-- PRODUCT 8 -->
 <div class="product">
-  <div class="product-title">পণ্য ৮</div>
-  <div class="price">৳800</div>
+  <img src="https://placehold.co/600x500/ffe4ed/e91e63?text=Baby+Bed+Set" alt="Baby Bed Set">
+  <div class="product-title">Baby Bed Set</div>
+  <div class="price">৳950</div>
   পরিমাণ:
   <input type="number" id="qty8" value="0" min="0" onchange="calculate()">
 </div>
 
 </div>
 
+<!-- CUSTOMER INFORMATION -->
 <div class="card">
 
 <h2>📦 আপনার তথ্য</h2>
@@ -256,24 +289,24 @@ footer {
 
 const prices = [
   950,
-  800,
   950,
-  800,
   950,
-  800,
   950,
-  800
+  950,
+  950,
+  950,
+  950
 ];
 
 const names = [
-  "পণ্য ১",
-  "পণ্য ২",
-  "পণ্য ৩",
-  "পণ্য ৪",
-  "পণ্য ৫",
-  "পণ্য ৬",
-  "পণ্য ৭",
-  "পণ্য ৮"
+  "Colour Pink, Soft Baby Set",
+  "Baby Bed Set",
+  "Baby Bed Set",
+  "Baby Bed Set",
+  "Baby Bed Set",
+  "Baby Bed Set",
+  "Baby Bed Set",
+  "Baby Bed Set"
 ];
 
 function calculate() {
@@ -317,11 +350,11 @@ function orderNow() {
   }
 
   let orderText =
-    "নতুন অর্ডার - ASHU BABY CARE\n\n";
+    "🛍️ নতুন অর্ডার - ASHU BABY CARE\n\n";
 
-  orderText += "নাম: " + name + "\n";
-  orderText += "মোবাইল: " + phone + "\n";
-  orderText += "ঠিকানা: " + address + "\n\n";
+  orderText += "👤 নাম: " + name + "\n";
+  orderText += "📱 মোবাইল: " + phone + "\n";
+  orderText += "📍 ঠিকানা: " + address + "\n\n";
 
   let subtotal = 0;
   let hasProduct = false;
@@ -339,6 +372,7 @@ function orderNow() {
         qty * prices[i - 1];
 
       orderText +=
+        "🛒 " +
         names[i - 1] +
         " — " +
         qty +
@@ -372,7 +406,7 @@ function orderNow() {
     "\nডেলিভারি চার্জ: ৳" + delivery;
 
   orderText +=
-    "\nসর্বমোট: ৳" + total;
+    "\n💰 সর্বমোট: ৳" + total;
 
   const whatsappNumber = "8801772339030";
 
