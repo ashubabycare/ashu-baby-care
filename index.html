@@ -1,259 +1,393 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ASHU BABY CARE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>ASHU BABY CARE</title>
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff5f8;
-      color: #333;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    .header {
-      background: #f48fb1;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff5f8;
+  color: #333;
+}
 
-    .header h1 {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
+.header {
+  background: #f48fb1;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+}
 
-    .header p {
-      font-size: 15px;
-    }
+.header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+}
 
-    .container {
-      max-width: 600px;
-      margin: auto;
-      padding: 20px 15px;
-    }
+.header p {
+  margin: 0;
+  font-size: 16px;
+}
 
-    .product {
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 18px 15px;
+}
 
-    .product img {
-      width: 100%;
-      max-height: 350px;
-      object-fit: contain;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,.08);
+}
 
-    .product h2 {
-      color: #e91e63;
-      margin-bottom: 10px;
-    }
+.card h2 {
+  color: #e91e63;
+  margin-top: 0;
+}
 
-    .price {
-      font-size: 28px;
-      font-weight: bold;
-      color: #e91e63;
-      margin: 15px 0;
-    }
+.product {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
 
-    .order-box {
-      background: white;
-      margin-top: 20px;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+}
 
-    .order-box h2 {
-      text-align: center;
-      color: #e91e63;
-      margin-bottom: 20px;
-    }
+.price {
+  color: #e91e63;
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
 
-    input, textarea, select {
-      width: 100%;
-      padding: 13px;
-      margin-bottom: 12px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 16px;
-    }
+.product input {
+  width: 80px;
+  padding: 9px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 16px;
+}
 
-    button {
-      width: 100%;
-      padding: 15px;
-      background: #e91e63;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
 
-    button:hover {
-      background: #c2185b;
-    }
+.summary {
+  background: #fff0f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
 
-    .contact {
-      text-align: center;
-      padding: 25px 10px;
-      font-size: 14px;
-    }
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
 
-    .contact a {
-      color: #e91e63;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.total {
+  font-size: 22px;
+  font-weight: bold;
+  color: #e91e63;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
 
-    footer {
-      text-align: center;
-      background: #f48fb1;
-      color: white;
-      padding: 15px;
-      margin-top: 20px;
-    }
-  </style>
+button {
+  width: 100%;
+  padding: 15px;
+  background: #e91e63;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  background: #f48fb1;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="header">
-    <h1>ASHU BABY CARE</h1>
-    <p>আপনার শিশুর যত্নে আমাদের বিশ্বস্ত সঙ্গী ❤️</p>
-  </div>
+<div class="header">
+  <h1>ASHU BABY CARE</h1>
+  <p>আপনার শিশুর যত্নে আমাদের বিশ্বস্ত সঙ্গী ❤️</p>
+</div>
 
-  <div class="container">
+<div class="container">
 
-    <div class="product">
+<div class="card">
 
-      <!-- এখানে আপনার প্রোডাক্টের ছবি পরে বসানো হবে -->
-      <div style="
-        background:#ffe4ec;
-        height:300px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        border-radius:12px;
-        color:#e91e63;
-        font-size:22px;
-        font-weight:bold;
-      ">
-        ASHU BABY CARE
-      </div>
+<h2>🛍️ পণ্য নির্বাচন করুন</h2>
 
-      <h2>Baby Care Product</h2>
+<div class="product">
+  <div class="product-title">পণ্য ১</div>
+  <div class="price">৳950</div>
+  পরিমাণ:
+  <input type="number" id="qty1" value="0" min="0" onchange="calculate()">
+</div>
 
-      <p>
-        আপনার শিশুর জন্য মানসম্মত ও প্রয়োজনীয় পণ্য।
-      </p>
+<div class="product">
+  <div class="product-title">পণ্য ২</div>
+  <div class="price">৳800</div>
+  পরিমাণ:
+  <input type="number" id="qty2" value="0" min="0" onchange="calculate()">
+</div>
 
-      <div class="price">৳ ১,০৫০</div>
+<div class="product">
+  <div class="product-title">পণ্য ৩</div>
+  <div class="price">৳950</div>
+  পরিমাণ:
+  <input type="number" id="qty3" value="0" min="0" onchange="calculate()">
+</div>
 
-    </div>
+<div class="product">
+  <div class="product-title">পণ্য ৪</div>
+  <div class="price">৳800</div>
+  পরিমাণ:
+  <input type="number" id="qty4" value="0" min="0" onchange="calculate()">
+</div>
 
+<div class="product">
+  <div class="product-title">পণ্য ৫</div>
+  <div class="price">৳950</div>
+  পরিমাণ:
+  <input type="number" id="qty5" value="0" min="0" onchange="calculate()">
+</div>
 
-    <div class="order-box">
+<div class="product">
+  <div class="product-title">পণ্য ৬</div>
+  <div class="price">৳800</div>
+  পরিমাণ:
+  <input type="number" id="qty6" value="0" min="0" onchange="calculate()">
+</div>
 
-      <h2>অর্ডার করুন</h2>
+<div class="product">
+  <div class="product-title">পণ্য ৭</div>
+  <div class="price">৳950</div>
+  পরিমাণ:
+  <input type="number" id="qty7" value="0" min="0" onchange="calculate()">
+</div>
 
-      <form onsubmit="orderNow(event)">
+<div class="product">
+  <div class="product-title">পণ্য ৮</div>
+  <div class="price">৳800</div>
+  পরিমাণ:
+  <input type="number" id="qty8" value="0" min="0" onchange="calculate()">
+</div>
 
-        <input
-          type="text"
-          id="name"
-          placeholder="আপনার নাম"
-          required
-        >
+</div>
 
-        <input
-          type="tel"
-          id="phone"
-          placeholder="মোবাইল নম্বর"
-          required
-        >
+<div class="card">
 
-        <textarea
-          id="address"
-          rows="4"
-          placeholder="সম্পূর্ণ ঠিকানা"
-          required
-        ></textarea>
+<h2>📦 আপনার তথ্য</h2>
 
-        <select id="quantity">
-          <option value="1">১টি</option>
-          <option value="2">২টি</option>
-          <option value="3">৩টি</option>
-          <option value="4">৪টি</option>
-          <option value="5">৫টি</option>
-        </select>
+<input id="name" type="text" placeholder="আপনার নাম">
 
-        <button type="submit">
-          🛒 অর্ডার করুন
-        </button>
+<input id="phone" type="tel" placeholder="মোবাইল নম্বর">
 
-      </form>
+<textarea id="address" rows="4" placeholder="সম্পূর্ণ ঠিকানা"></textarea>
 
-    </div>
+<select id="delivery" onchange="calculate()">
+  <option value="80">ঢাকার ভিতর — ডেলিভারি ৳80</option>
+  <option value="120">ঢাকার বাইরে — ডেলিভারি ৳120</option>
+</select>
 
+<div class="summary">
 
-    <div class="contact">
+<p>
+<span>পণ্যের মোট:</span>
+<strong>৳<span id="subtotal">0</span></strong>
+</p>
 
-      <p>📞 ফোন: <a href="tel:01772339030">01772339030</a></p>
+<p>
+<span>ডেলিভারি:</span>
+<strong>৳<span id="deliveryCost">80</span></strong>
+</p>
 
-      <p style="margin-top:10px;">
-        📍 Hosni Dalan, Lalbag, Dhaka
-      </p>
+<p class="total">
+<span>সর্বমোট:</span>
+<strong>৳<span id="total">80</span></strong>
+</p>
 
-    </div>
+</div>
 
-  </div>
+<br>
 
+<button onclick="orderNow()">
+📱 WhatsApp-এ অর্ডার করুন
+</button>
 
-  <footer>
-    © 2026 ASHU BABY CARE
-  </footer>
+</div>
 
+</div>
 
-  <script>
+<footer>
+© 2026 ASHU BABY CARE
+</footer>
 
-    function orderNow(event) {
+<script>
 
-      event.preventDefault();
+const prices = [
+  950,
+  800,
+  950,
+  800,
+  950,
+  800,
+  950,
+  800
+];
 
-      let name = document.getElementById("name").value;
-      let phone = document.getElementById("phone").value;
-      let address = document.getElementById("address").value;
-      let quantity = document.getElementById("quantity").value;
+const names = [
+  "পণ্য ১",
+  "পণ্য ২",
+  "পণ্য ৩",
+  "পণ্য ৪",
+  "পণ্য ৫",
+  "পণ্য ৬",
+  "পণ্য ৭",
+  "পণ্য ৮"
+];
 
-      let message =
-        "নতুন অর্ডার%0A%0A" +
-        "নাম: " + name + "%0A" +
-        "মোবাইল: " + phone + "%0A" +
-        "ঠিকানা: " + address + "%0A" +
-        "পরিমাণ: " + quantity + " টি%0A%0A" +
-        "ASHU BABY CARE";
+function calculate() {
 
-      window.open(
-        "https://wa.me/8801772339030?text=" + message,
-        "_blank"
-      );
+  let subtotal = 0;
+
+  for (let i = 1; i <= 8; i++) {
+
+    let qty =
+      Number(document.getElementById("qty" + i).value) || 0;
+
+    subtotal += qty * prices[i - 1];
+  }
+
+  let delivery =
+    Number(document.getElementById("delivery").value);
+
+  let total = subtotal + delivery;
+
+  document.getElementById("subtotal").innerText = subtotal;
+  document.getElementById("deliveryCost").innerText = delivery;
+  document.getElementById("total").innerText = total;
+}
+
+function orderNow() {
+
+  let name =
+    document.getElementById("name").value.trim();
+
+  let phone =
+    document.getElementById("phone").value.trim();
+
+  let address =
+    document.getElementById("address").value.trim();
+
+  if (!name || !phone || !address) {
+
+    alert("দয়া করে নাম, মোবাইল নম্বর ও ঠিকানা দিন।");
+
+    return;
+  }
+
+  let orderText =
+    "নতুন অর্ডার - ASHU BABY CARE\n\n";
+
+  orderText += "নাম: " + name + "\n";
+  orderText += "মোবাইল: " + phone + "\n";
+  orderText += "ঠিকানা: " + address + "\n\n";
+
+  let subtotal = 0;
+  let hasProduct = false;
+
+  for (let i = 1; i <= 8; i++) {
+
+    let qty =
+      Number(document.getElementById("qty" + i).value) || 0;
+
+    if (qty > 0) {
+
+      hasProduct = true;
+
+      let itemTotal =
+        qty * prices[i - 1];
+
+      orderText +=
+        names[i - 1] +
+        " — " +
+        qty +
+        " টি × ৳" +
+        prices[i - 1] +
+        " = ৳" +
+        itemTotal +
+        "\n";
+
+      subtotal += itemTotal;
     }
+  }
 
-  </script>
+  if (!hasProduct) {
+
+    alert("কমপক্ষে একটি পণ্য নির্বাচন করুন।");
+
+    return;
+  }
+
+  let delivery =
+    Number(document.getElementById("delivery").value);
+
+  let total =
+    subtotal + delivery;
+
+  orderText +=
+    "\nপণ্যের মোট: ৳" + subtotal;
+
+  orderText +=
+    "\nডেলিভারি চার্জ: ৳" + delivery;
+
+  orderText +=
+    "\nসর্বমোট: ৳" + total;
+
+  const whatsappNumber = "8801772339030";
+
+  const url =
+    "https://wa.me/" +
+    whatsappNumber +
+    "?text=" +
+    encodeURIComponent(orderText);
+
+  window.open(url, "_blank");
+}
+
+calculate();
+
+</script>
 
 </body>
 </html>
