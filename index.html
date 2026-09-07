@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ASHU BABY CARE</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff5f8;
+      color: #333;
+    }
+
+    .header {
+      background: #f48fb1;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      font-size: 15px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px 15px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      max-height: 350px;
+      object-fit: contain;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .product h2 {
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #e91e63;
+      margin: 15px 0;
+    }
+
+    .order-box {
+      background: white;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .order-box h2 {
+      text-align: center;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #c2185b;
+    }
+
+    .contact {
+      text-align: center;
+      padding: 25px 10px;
+      font-size: 14px;
+    }
+
+    .contact a {
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      background: #f48fb1;
+      color: white;
+      padding: 15px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>ASHU BABY CARE</h1>
+    <p>আপনার শিশুর যত্নে আমাদের বিশ্বস্ত সঙ্গী ❤️</p>
+  </div>
+
+  <div class="container">
+
+    <div class="product">
+
+      <!-- এখানে আপনার প্রোডাক্টের ছবি পরে বসানো হবে -->
+      <div style="
+        background:#ffe4ec;
+        height:300px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius:12px;
+        color:#e91e63;
+        font-size:22px;
+        font-weight:bold;
+      ">
+        ASHU BABY CARE
+      </div>
+
+      <h2>Baby Care Product</h2>
+
+      <p>
+        আপনার শিশুর জন্য মানসম্মত ও প্রয়োজনীয় পণ্য।
+      </p>
+
+      <div class="price">৳ ১,০৫০</div>
+
+    </div>
+
+
+    <div class="order-box">
+
+      <h2>অর্ডার করুন</h2>
+
+      <form onsubmit="orderNow(event)">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="আপনার নাম"
+          required
+        >
+
+        <input
+          type="tel"
+          id="phone"
+          placeholder="মোবাইল নম্বর"
+          required
+        >
+
+        <textarea
+          id="address"
+          rows="4"
+          placeholder="সম্পূর্ণ ঠিকানা"
+          required
+        ></textarea>
+
+        <select id="quantity">
+          <option value="1">১টি</option>
+          <option value="2">২টি</option>
+          <option value="3">৩টি</option>
+          <option value="4">৪টি</option>
+          <option value="5">৫টি</option>
+        </select>
+
+        <button type="submit">
+          🛒 অর্ডার করুন
+        </button>
+
+      </form>
+
+    </div>
+
+
+    <div class="contact">
+
+      <p>📞 ফোন: <a href="tel:01772339030">01772339030</a></p>
+
+      <p style="margin-top:10px;">
+        📍 Hosni Dalan, Lalbag, Dhaka
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+    © 2026 ASHU BABY CARE
+  </footer>
+
+
+  <script>
+
+    function orderNow(event) {
+
+      event.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let phone = document.getElementById("phone").value;
+      let address = document.getElementById("address").value;
+      let quantity = document.getElementById("quantity").value;
+
+      let message =
+        "নতুন অর্ডার%0A%0A" +
+        "নাম: " + name + "%0A" +
+        "মোবাইল: " + phone + "%0A" +
+        "ঠিকানা: " + address + "%0A" +
+        "পরিমাণ: " + quantity + " টি%0A%0A" +
+        "ASHU BABY CARE";
+
+      window.open(
+        "https://wa.me/8801772339030?text=" + message,
+        "_blank"
+      );
+    }
+
+  </script>
+
+</body>
+</html>
